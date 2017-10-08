@@ -2,11 +2,16 @@
 
 By Jifeng Dai, Yi Li, Kaiming He, Jian Sun
 
+**It is highly recommended to use the [deformable R-FCN](https://github.com/msracver/Deformable-ConvNets) implemented in MXNet, which significantly increases the accuracy at very low extra computational overhead.**
+
+*A [python version of R-FCN](https://github.com/Orpine/py-R-FCN) is available, which supports end-to-end training/inference of R-FCN for object detection.*
+
+
 ### Introduction
 
 **R-FCN** is a region-based object detection framework leveraging deep fully-convolutional networks, which is accurate and efficient. In contrast to previous region-based detectors such as Fast/Faster R-CNN that apply a costly per-region sub-network hundreds of times, our region-based detector is fully convolutional with almost all computation shared on the entire image. R-FCN can natually adopt powerful fully convolutional image classifier backbones, such as [ResNets](https://github.com/KaimingHe/deep-residual-networks), for object detection.
 
-R-FCN was initially described in an [arxiv tech report](https://arxiv.org/abs/1605.06409).
+R-FCN was initially described in a [NIPS 2016 paper](https://arxiv.org/abs/1605.06409).
 
 This code has been tested on Windows 7/8 64 bit, Windows Server 2012 R2, and Ubuntu 14.04, with Matlab 2014a.
 
@@ -26,10 +31,11 @@ If you find R-FCN useful in your research, please consider citing:
     }
 
 ### Main Results
-                   | training data       | test data             | mAP   | time/img (K40) | time/img (Titian X)
--------------------|:-------------------:|:---------------------:|:-----:|:--------------:|:------------------:|
-R-FCN, ResNet-50  | VOC 07+12 trainval  | VOC 07 test           | 77.4% | 0.12sec        | 0.09sec            |
-R-FCN, ResNet-101 | VOC 07+12 trainval  | VOC 07 test           | 79.5% | 0.17sec        | 0.12sec            |
+
+|                   | training data       | test data             | mAP   | time/img (K40) | time/img (Titian X)|
+|-------------------|:-------------------:|:---------------------:|:-----:|:--------------:|:------------------:|
+|R-FCN, ResNet-50  | VOC 07+12 trainval  | VOC 07 test           | 77.4% | 0.12sec        | 0.09sec            |
+|R-FCN, ResNet-101 | VOC 07+12 trainval  | VOC 07 test           | 79.5% | 0.17sec        | 0.12sec            |
 
 
 ### Requirements: software
@@ -77,18 +83,18 @@ GPU: Titan, Titan X, K40, K80.
 
 ### Resources
 
-0. Experiment logs: [DropBox](https://www.dropbox.com/s/is2gatfdxs1tcls/experiment_log.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1mhFYejI)
+0. Experiment logs: [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc44qdRNJTsXLIU-2w), [BaiduYun](http://pan.baidu.com/s/1mhFYejI)
 
 If the automatic "fetch_data" fails, you may manually download resouces from:
 
 0. Pre-complied caffe mex (Windows):
-    - [DropBox](https://www.dropbox.com/s/n1x2bybd6d03s7c/caffe_mex.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1i4OlG7z)
+    - [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc456RlstMF-4wHr1g), [BaiduYun](http://pan.baidu.com/s/1i4OlG7z)
 0. Demo R-FCN model:
-    - [DropBox](https://www.dropbox.com/s/1cvg8ke9nuo9vg3/demo_models_ResNet-101L.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1o77gFXo)
+    - [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc486Tyvkf3koU7R7w), [BaiduYun](http://pan.baidu.com/s/1o77gFXo)
 0. ImageNet-pretrained networks:
-    - ResNet-50 net [DropBox](https://www.dropbox.com/s/0uzh90f6jx9l0yf/models_ResNet-50L.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1kVm4ly3)
-    - ResNet-101 net [DropBox](https://www.dropbox.com/s/ev91ss0pyd5h9ix/models_ResNet-101L.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1nvgu1pJ)
+    - ResNet-50 net [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc46RPYjtbdbNwPJ_w), [BaiduYun](http://pan.baidu.com/s/1kVm4ly3)
+    - ResNet-101 net [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc47z4S7O5Ql6W_0-g), [BaiduYun](http://pan.baidu.com/s/1nvgu1pJ)
 0. Pre-computed region proposals:
-    - [DropBox](https://www.dropbox.com/s/gagkulgcif6k1dd/proposals.zip?dl=0), [BaiduYun](http://pan.baidu.com/s/1nuC8Lhn)
+    - [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhc49StWpgPo2GPEB_A), [BaiduYun](http://pan.baidu.com/s/1hrAJ5re)
 
 
